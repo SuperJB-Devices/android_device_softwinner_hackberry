@@ -14,11 +14,11 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-$(call inherit-product, device/softwinner/mk802/mk802.mk)
+$(call inherit-product, device/softwinner/hackberry/hackberry.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_mk802
-PRODUCT_DEVICE := mk802
+PRODUCT_NAME := full_hackberry
+PRODUCT_DEVICE := hackberry
 PRODUCT_BRAND := Allwinner
-PRODUCT_MODEL := mk802
+PRODUCT_MODEL := hackberry
 PRODUCT_MANUFACTURER := Allwinner

@@ -47,7 +47,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1073741824
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 #EGL stuff
-BOARD_EGL_CFG := device/softwinner/mk802/egl.cfg
+BOARD_EGL_CFG := device/softwinner/hackberry/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_USE_SKIA_LCDTEXT := true
 ENABLE_WEBGL := true
@@ -63,10 +63,10 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH = "/sys/class/android_usb/android0/f_mass_storag
 TARGET_USE_CUSTOM_SECOND_LUN_NUM := 1
 TARGET_RECOVERY_PRE_COMMAND := "echo -n boot-recovery | busybox dd of=/dev/block/nandf count=1 conv=sync; sync"
 BOARD_USE_LEGACY_TOUCHSCREEN := true
-TARGET_HARDWARE_INCLUDE := $(TOP)/device/softwinner/mk802/libraries/include
+TARGET_HARDWARE_INCLUDE := $(TOP)/device/softwinner/hackberry/libraries/include
 TARGET_PROVIDES_INIT_RC := true
 TARGET_BOOTANIMATION_PRELOAD := true
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/softwinner/mk802/releasetools/907_ota_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/softwinner/hackberry/releasetools/907_ota_from_target_files
 
 # Wifi stuff
 WPA_SUPPLICANT_VERSION := VER_0_8_X
@@ -91,7 +91,7 @@ WIFI_DRIVER_FW_PATH_PARAM := ""
 TARGET_CUSTOM_WIFI := ../../hardware/realtek/wlan/wifi_realtek.c
 
 # Beware: set only prebuilt OR source+config
-TARGET_PREBUILT_KERNEL := device/softwinner/mk802/kernel
+TARGET_PREBUILT_KERNEL := device/softwinner/hackberry/kernel
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_CMDLINE := console=ttyS0,115200 rw init=/init loglevel=8
 

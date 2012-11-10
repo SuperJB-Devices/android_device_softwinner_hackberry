@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),mk802)
+ifeq ($(TARGET_DEVICE),hackberry)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

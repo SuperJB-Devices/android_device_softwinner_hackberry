@@ -1,12 +1,12 @@
 # Specify phone tech before including full_phone
 $(call inherit-product, vendor/osr/config/gsm.mk)
 
-PRODUCT_RELEASE_NAME := mk802
+PRODUCT_RELEASE_NAME := hackberry
 
 # Inherit some common OSR stuff.
 #$(call inherit-product, vendor/osr/config/common_full_tablet_wifionly.mk)
 
-$(call inherit-product, device/softwinner/mk802/full_mk802.mk)
+$(call inherit-product, device/softwinner/hackberry/full_hackberry.mk)
 
 # Add Google apps
 #$(call inherit-product, vendor/google/minimal.mk)
@@ -16,9 +16,9 @@ $(call inherit-product, device/softwinner/mk802/full_mk802.mk)
 # Addons personal (call files from vendor/osr/prebuilt/app)
 $(call inherit-product, vendor/osr/addons/superatmel.mk)
 
-PRODUCT_NAME := osr_mk802
+PRODUCT_NAME := osr_hackberry
 PRODUCT_BRAND := Google
-PRODUCT_DEVICE := mk802
+PRODUCT_DEVICE := hackberry
 PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := Asus
 

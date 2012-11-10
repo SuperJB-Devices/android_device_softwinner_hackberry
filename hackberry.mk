@@ -21,51 +21,51 @@ PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 #Init files
 PRODUCT_COPY_FILES := \
-        device/softwinner/mk802/kernel:kernel \
-        device/softwinner/mk802/init.rc:root/init.rc \
-        device/softwinner/mk802/initlogo.rle:root/initlogo.rle \
-        device/softwinner/mk802/init.sun4i.rc:root/init.sun4i.rc \
-        device/softwinner/mk802/init.sun4i.usb.rc:root/init.sun4i.usb.rc \
-        device/softwinner/mk802/ueventd.sun4i.rc:root/ueventd.sun4i.rc
+        device/softwinner/hackberry/kernel:kernel \
+        device/softwinner/hackberry/init.rc:root/init.rc \
+        device/softwinner/hackberry/initlogo.rle:root/initlogo.rle \
+        device/softwinner/hackberry/init.sun4i.rc:root/init.sun4i.rc \
+        device/softwinner/hackberry/init.sun4i.usb.rc:root/init.sun4i.usb.rc \
+        device/softwinner/hackberry/ueventd.sun4i.rc:root/ueventd.sun4i.rc
 
 #Etc files
 PRODUCT_COPY_FILES += \
-        vendor/softwinner/mk802/propietary/etc/ppp/ip-down:system/etc/ppp/ip-down \
-        vendor/softwinner/mk802/propietary/etc/ppp/ip-up:system/etc/ppp/ip-up \
-        vendor/softwinner/mk802/propietary/etc/ppp/call-pppd:system/etc/ppp/call-pppd \
-        vendor/softwinner/mk802/propietary/etc/firmware/ath3k-1.fw:system/etc/firmware/ath3k-1.fw \
-        vendor/softwinner/mk802/propietary/etc/firmware/ath3k-1.fw:system/vendor/firmware/ath3k-1.fw \
-        vendor/softwinner/mk802/propietary/etc/3g_dongle.cfg:system/etc/3g_dongle.cfg \
-        vendor/softwinner/mk802/propietary/etc/gps.conf:system/etc/gps.conf \
-        vendor/softwinner/mk802/propietary/etc/media_profiles.xml:system/etc/media_profiles.xml \
-        vendor/softwinner/mk802/propietary/etc/usb_modeswitch.sh:system/etc/usb_modeswitch.sh \
-        vendor/softwinner/mk802/propietary/etc/vold.fstab:system/etc/vold.fstab
+        vendor/softwinner/hackberry/propietary/etc/ppp/ip-down:system/etc/ppp/ip-down \
+        vendor/softwinner/hackberry/propietary/etc/ppp/ip-up:system/etc/ppp/ip-up \
+        vendor/softwinner/hackberry/propietary/etc/ppp/call-pppd:system/etc/ppp/call-pppd \
+        vendor/softwinner/hackberry/propietary/etc/firmware/ath3k-1.fw:system/etc/firmware/ath3k-1.fw \
+        vendor/softwinner/hackberry/propietary/etc/firmware/ath3k-1.fw:system/vendor/firmware/ath3k-1.fw \
+        vendor/softwinner/hackberry/propietary/etc/3g_dongle.cfg:system/etc/3g_dongle.cfg \
+        vendor/softwinner/hackberry/propietary/etc/gps.conf:system/etc/gps.conf \
+        vendor/softwinner/hackberry/propietary/etc/media_profiles.xml:system/etc/media_profiles.xml \
+        vendor/softwinner/hackberry/propietary/etc/usb_modeswitch.sh:system/etc/usb_modeswitch.sh \
+        vendor/softwinner/hackberry/propietary/etc/vold.fstab:system/etc/vold.fstab
 
 PRODUCT_COPY_FILES += \
-        $(call find-copy-subdir-files,*,vendor/softwinner/mk802/propietary/etc/init.d,system/etc/init.d)
+        $(call find-copy-subdir-files,*,vendor/softwinner/hackberry/propietary/etc/init.d,system/etc/init.d)
 
 PRODUCT_COPY_FILES += \
-        $(call find-copy-subdir-files,*,vendor/softwinner/mk802/propietary/etc/usb_modeswitch.d,system/etc/usb_modeswitch.d)
+        $(call find-copy-subdir-files,*,vendor/softwinner/hackberry/propietary/etc/usb_modeswitch.d,system/etc/usb_modeswitch.d)
 
 #Wifi files
 PRODUCT_COPY_FILES += \
-        vendor/softwinner/mk802/propietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+        vendor/softwinner/hackberry/propietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 #Fix for Mali build
-$(shell mkdir -p out/target/product/mk802/obj/SHARED_LIBRARIES/libMali_intermediates)
-$(shell mkdir -p out/target/product/mk802/obj/SHARED_LIBRARIES/libUMP_intermediates)
-$(shell touch out/target/product/mk802/obj/SHARED_LIBRARIES/libMali_intermediates/export_includes)
-$(shell touch out/target/product/mk802/obj/SHARED_LIBRARIES/libUMP_intermediates/export_includes)
-$(shell mkdir -p out/target/product/mk802/obj/lib/)
-$(shell cp vendor/softwinner/mk802/propietary/lib/libMali.so out/target/product/mk802/obj/lib/)
-$(shell cp vendor/softwinner/mk802/propietary/lib/libUMP.so out/target/product/mk802/obj/lib/)
+$(shell mkdir -p out/target/product/hackberry/obj/SHARED_LIBRARIES/libMali_intermediates)
+$(shell mkdir -p out/target/product/hackberry/obj/SHARED_LIBRARIES/libUMP_intermediates)
+$(shell touch out/target/product/hackberry/obj/SHARED_LIBRARIES/libMali_intermediates/export_includes)
+$(shell touch out/target/product/hackberry/obj/SHARED_LIBRARIES/libUMP_intermediates/export_includes)
+$(shell mkdir -p out/target/product/hackberry/obj/lib/)
+$(shell cp vendor/softwinner/hackberry/propietary/lib/libMali.so out/target/product/hackberry/obj/lib/)
+$(shell cp vendor/softwinner/hackberry/propietary/lib/libUMP.so out/target/product/hackberry/obj/lib/)
 
 
 #OMX
-PRODUCT_COPY_FILES += vendor/softwinner/mk802/propietary/etc/media_codecs.xml:system/etc/media_codecs.xml
+PRODUCT_COPY_FILES += vendor/softwinner/hackberry/propietary/etc/media_codecs.xml:system/etc/media_codecs.xml
 
 #Audio
-PRODUCT_COPY_FILES += device/softwinner/mk802/libraries/audio/audio_policy.conf:system/etc/audio_policy.conf
+PRODUCT_COPY_FILES += device/softwinner/hackberry/libraries/audio/audio_policy.conf:system/etc/audio_policy.conf
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -106,7 +106,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.allwinner.device=1 \
         ro.disable_phablet_ui=1
 
-DEVICE_PACKAGE_OVERLAYS := device/softwinner/mk802/overlay
+DEVICE_PACKAGE_OVERLAYS := device/softwinner/hackberry/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -167,4 +167,4 @@ PRODUCT_PACKAGES += \
         make_ext4fs \
         e2fsck
 
-$(call inherit-product-if-exists, vendor/softwinner/mk802/mk802-vendor.mk)
+$(call inherit-product-if-exists, vendor/softwinner/hackberry/hackberry-vendor.mk)
